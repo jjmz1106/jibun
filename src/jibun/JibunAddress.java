@@ -15,22 +15,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import common.Conn;
+
 public class JibunAddress {
 	
 	public static void main(String[] args) {
-		String keyStr = "dong_code\r\n" + 
-				"sido\r\n" + 
-				"gugun\r\n" + 
-				"dong_name\r\n" + 
-				"lee_name\r\n" + 
-				"is_mnt\r\n" + 
-				"jibun\r\n" + 
-				"sub_jibun\r\n" + 
-				"road_code\r\n" + 
-				"is_base\r\n" + 
-				"build_num\r\n" + 
-				"sub_build_num\r\n" + 
-				"jibun_num" ;
+		String keyStr = "dong_code\r\n" + "sido\r\n" + "gugun\r\n" + "dong_name\r\n" + "lee_name\r\n" + 
+				"is_mnt\r\n" + "jibun\r\n" + "sub_jibun\r\n" + "road_code\r\n" + "is_base\r\n" + 
+				"build_num\r\n" + "sub_build_num\r\n" + "jibun_num" ;
 		String keys[] = keyStr.split("\r\n");
 	
 		try {
@@ -66,7 +58,7 @@ public class JibunAddress {
 			}
 			con.commit();
 			long eTime = System.currentTimeMillis();
-			System.out.println(eTime-sTime);
+			System.out.println("끝!");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
@@ -79,3 +71,4 @@ public class JibunAddress {
 	}
 
 }
+
